@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>calcan - 依存ライブラリ一覧</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fffbf5;
+      color: #331f41;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      width: 100%;
+      max-width: 800px;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(91, 40, 122, 0.05);
+      border: 1px solid rgba(91, 40, 122, 0.1);
+    }
+    h1 {
+      color: #5b287a;
+      border-bottom: 2px solid #ff7597;
+      padding-bottom: 12px;
+      font-size: 28px;
+      margin-top: 0;
+    }
+    p {
+      line-height: 1.6;
+      color: #6b5c77;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 24px;
+    }
+    th, td {
+      text-align: left;
+      padding: 14px;
+      border-bottom: 1px solid rgba(91, 40, 122, 0.1);
+    }
+    th {
+      background-color: rgba(91, 40, 122, 0.03);
+      color: #5b287a;
+      font-weight: 700;
+    }
+    tr:hover {
+      background-color: rgba(255, 117, 151, 0.02);
+    }
+    .badge {
+      font-size: 11px;
+      font-weight: bold;
+      padding: 4px 8px;
+      border-radius: 10px;
+      text-transform: uppercase;
+    }
+    .badge-prod {
+      background-color: rgba(76, 175, 80, 0.15);
+      color: #2e7d32;
+    }
+    .badge-dev {
+      background-color: rgba(91, 40, 122, 0.1);
+      color: #5b287a;
+    }
+    .version {
+      font-family: monospace;
+      font-size: 13px;
+      background-color: #f5f5f5;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>calcan 依存ライブラリ一覧 🐾</h1>
+    <p>線形代数計算ドリルアプリ「calcan」で使用しているプロダクションおよび開発用の主要な依存パッケージ一覧まる。</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ライブラリ名</th>
+          <th>タイプ</th>
+          <th>目的 / 役割</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong style="color: #5b287a;">react</strong></td>
+          <td><span class="badge badge-prod">Production</span></td>
+          <td>ユーザーインターフェースを構築するためのコアライブラリ。コンポーネントツリーと状態管理を担当。</td>
+        </tr>
+        <tr>
+          <td><strong style="color: #5b287a;">react-dom</strong></td>
+          <td><span class="badge badge-prod">Production</span></td>
+          <td>ReactをブラウザのDOMにマウントし、Web上で動作させるためのエントリポイント。</td>
+        </tr>
+        <tr>
+          <td><strong style="color: #5b287a;">katex</strong></td>
+          <td><span class="badge badge-prod">Production</span></td>
+          <td>数式を高速かつ美しくブラウザ上にレンダリングするためのデファクトスタンダードライブラリ。</td>
+        </tr>
+        <tr>
+          <td><strong style="color: #5b287a;">lucide-react</strong></td>
+          <td><span class="badge badge-prod">Production</span></td>
+          <td>美しくシンプルなSVGアイコンを提供するアイコンパックライブラリ。</td>
+        </tr>
+        <tr>
+          <td><strong>typescript</strong></td>
+          <td><span class="badge badge-dev">Development</span></td>
+          <td>型安全性と高度なコード補完を開発時にもたらす静的型付け言語コンパイラ。</td>
+        </tr>
+        <tr>
+          <td><strong>vite</strong></td>
+          <td><span class="badge badge-dev">Development</span></td>
+          <td>高速なホットリロード (HMR) とビルド最適化を行う次世代ビルド・開発ツール。</td>
+        </tr>
+        <tr>
+          <td><strong>vitest</strong></td>
+          <td><span class="badge badge-dev">Development</span></td>
+          <td>Viteと緊密に統合され、非常に高速に動作するテストランナー・フレームワーク。</td>
+        </tr>
+        <tr>
+          <td><strong>@testing-library/react</strong></td>
+          <td><span class="badge badge-dev">Development</span></td>
+          <td>Reactコンポーネントをユーザーの操作視点で検証するためのUIテスト用ライブラリ。</td>
+        </tr>
+        <tr>
+          <td><strong>jsdom</strong></td>
+          <td><span class="badge badge-dev">Development</span></td>
+          <td>Node.js環境下でブラウザの挙動をシミュレートするヘッドレスDOM実装（テスト実行時に使用）。</td>
+        </tr>
+        <tr>
+          <td><strong>@vitest/coverage-v8</strong></td>
+          <td><span class="badge badge-dev">Development</span></td>
+          <td>テスト実行時のコードカバレッジを詳細に測定・分析しHTML等のレポートを生成するツール。</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

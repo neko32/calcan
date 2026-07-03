@@ -1,0 +1,1156 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for src/data/questions.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/data</a> questions.ts</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>1/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>1/1</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a>
+<a name='L175'></a><a href='#L175'>175</a>
+<a name='L176'></a><a href='#L176'>176</a>
+<a name='L177'></a><a href='#L177'>177</a>
+<a name='L178'></a><a href='#L178'>178</a>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a>
+<a name='L181'></a><a href='#L181'>181</a>
+<a name='L182'></a><a href='#L182'>182</a>
+<a name='L183'></a><a href='#L183'>183</a>
+<a name='L184'></a><a href='#L184'>184</a>
+<a name='L185'></a><a href='#L185'>185</a>
+<a name='L186'></a><a href='#L186'>186</a>
+<a name='L187'></a><a href='#L187'>187</a>
+<a name='L188'></a><a href='#L188'>188</a>
+<a name='L189'></a><a href='#L189'>189</a>
+<a name='L190'></a><a href='#L190'>190</a>
+<a name='L191'></a><a href='#L191'>191</a>
+<a name='L192'></a><a href='#L192'>192</a>
+<a name='L193'></a><a href='#L193'>193</a>
+<a name='L194'></a><a href='#L194'>194</a>
+<a name='L195'></a><a href='#L195'>195</a>
+<a name='L196'></a><a href='#L196'>196</a>
+<a name='L197'></a><a href='#L197'>197</a>
+<a name='L198'></a><a href='#L198'>198</a>
+<a name='L199'></a><a href='#L199'>199</a>
+<a name='L200'></a><a href='#L200'>200</a>
+<a name='L201'></a><a href='#L201'>201</a>
+<a name='L202'></a><a href='#L202'>202</a>
+<a name='L203'></a><a href='#L203'>203</a>
+<a name='L204'></a><a href='#L204'>204</a>
+<a name='L205'></a><a href='#L205'>205</a>
+<a name='L206'></a><a href='#L206'>206</a>
+<a name='L207'></a><a href='#L207'>207</a>
+<a name='L208'></a><a href='#L208'>208</a>
+<a name='L209'></a><a href='#L209'>209</a>
+<a name='L210'></a><a href='#L210'>210</a>
+<a name='L211'></a><a href='#L211'>211</a>
+<a name='L212'></a><a href='#L212'>212</a>
+<a name='L213'></a><a href='#L213'>213</a>
+<a name='L214'></a><a href='#L214'>214</a>
+<a name='L215'></a><a href='#L215'>215</a>
+<a name='L216'></a><a href='#L216'>216</a>
+<a name='L217'></a><a href='#L217'>217</a>
+<a name='L218'></a><a href='#L218'>218</a>
+<a name='L219'></a><a href='#L219'>219</a>
+<a name='L220'></a><a href='#L220'>220</a>
+<a name='L221'></a><a href='#L221'>221</a>
+<a name='L222'></a><a href='#L222'>222</a>
+<a name='L223'></a><a href='#L223'>223</a>
+<a name='L224'></a><a href='#L224'>224</a>
+<a name='L225'></a><a href='#L225'>225</a>
+<a name='L226'></a><a href='#L226'>226</a>
+<a name='L227'></a><a href='#L227'>227</a>
+<a name='L228'></a><a href='#L228'>228</a>
+<a name='L229'></a><a href='#L229'>229</a>
+<a name='L230'></a><a href='#L230'>230</a>
+<a name='L231'></a><a href='#L231'>231</a>
+<a name='L232'></a><a href='#L232'>232</a>
+<a name='L233'></a><a href='#L233'>233</a>
+<a name='L234'></a><a href='#L234'>234</a>
+<a name='L235'></a><a href='#L235'>235</a>
+<a name='L236'></a><a href='#L236'>236</a>
+<a name='L237'></a><a href='#L237'>237</a>
+<a name='L238'></a><a href='#L238'>238</a>
+<a name='L239'></a><a href='#L239'>239</a>
+<a name='L240'></a><a href='#L240'>240</a>
+<a name='L241'></a><a href='#L241'>241</a>
+<a name='L242'></a><a href='#L242'>242</a>
+<a name='L243'></a><a href='#L243'>243</a>
+<a name='L244'></a><a href='#L244'>244</a>
+<a name='L245'></a><a href='#L245'>245</a>
+<a name='L246'></a><a href='#L246'>246</a>
+<a name='L247'></a><a href='#L247'>247</a>
+<a name='L248'></a><a href='#L248'>248</a>
+<a name='L249'></a><a href='#L249'>249</a>
+<a name='L250'></a><a href='#L250'>250</a>
+<a name='L251'></a><a href='#L251'>251</a>
+<a name='L252'></a><a href='#L252'>252</a>
+<a name='L253'></a><a href='#L253'>253</a>
+<a name='L254'></a><a href='#L254'>254</a>
+<a name='L255'></a><a href='#L255'>255</a>
+<a name='L256'></a><a href='#L256'>256</a>
+<a name='L257'></a><a href='#L257'>257</a>
+<a name='L258'></a><a href='#L258'>258</a>
+<a name='L259'></a><a href='#L259'>259</a>
+<a name='L260'></a><a href='#L260'>260</a>
+<a name='L261'></a><a href='#L261'>261</a>
+<a name='L262'></a><a href='#L262'>262</a>
+<a name='L263'></a><a href='#L263'>263</a>
+<a name='L264'></a><a href='#L264'>264</a>
+<a name='L265'></a><a href='#L265'>265</a>
+<a name='L266'></a><a href='#L266'>266</a>
+<a name='L267'></a><a href='#L267'>267</a>
+<a name='L268'></a><a href='#L268'>268</a>
+<a name='L269'></a><a href='#L269'>269</a>
+<a name='L270'></a><a href='#L270'>270</a>
+<a name='L271'></a><a href='#L271'>271</a>
+<a name='L272'></a><a href='#L272'>272</a>
+<a name='L273'></a><a href='#L273'>273</a>
+<a name='L274'></a><a href='#L274'>274</a>
+<a name='L275'></a><a href='#L275'>275</a>
+<a name='L276'></a><a href='#L276'>276</a>
+<a name='L277'></a><a href='#L277'>277</a>
+<a name='L278'></a><a href='#L278'>278</a>
+<a name='L279'></a><a href='#L279'>279</a>
+<a name='L280'></a><a href='#L280'>280</a>
+<a name='L281'></a><a href='#L281'>281</a>
+<a name='L282'></a><a href='#L282'>282</a>
+<a name='L283'></a><a href='#L283'>283</a>
+<a name='L284'></a><a href='#L284'>284</a>
+<a name='L285'></a><a href='#L285'>285</a>
+<a name='L286'></a><a href='#L286'>286</a>
+<a name='L287'></a><a href='#L287'>287</a>
+<a name='L288'></a><a href='#L288'>288</a>
+<a name='L289'></a><a href='#L289'>289</a>
+<a name='L290'></a><a href='#L290'>290</a>
+<a name='L291'></a><a href='#L291'>291</a>
+<a name='L292'></a><a href='#L292'>292</a>
+<a name='L293'></a><a href='#L293'>293</a>
+<a name='L294'></a><a href='#L294'>294</a>
+<a name='L295'></a><a href='#L295'>295</a>
+<a name='L296'></a><a href='#L296'>296</a>
+<a name='L297'></a><a href='#L297'>297</a>
+<a name='L298'></a><a href='#L298'>298</a>
+<a name='L299'></a><a href='#L299'>299</a>
+<a name='L300'></a><a href='#L300'>300</a>
+<a name='L301'></a><a href='#L301'>301</a>
+<a name='L302'></a><a href='#L302'>302</a>
+<a name='L303'></a><a href='#L303'>303</a>
+<a name='L304'></a><a href='#L304'>304</a>
+<a name='L305'></a><a href='#L305'>305</a>
+<a name='L306'></a><a href='#L306'>306</a>
+<a name='L307'></a><a href='#L307'>307</a>
+<a name='L308'></a><a href='#L308'>308</a>
+<a name='L309'></a><a href='#L309'>309</a>
+<a name='L310'></a><a href='#L310'>310</a>
+<a name='L311'></a><a href='#L311'>311</a>
+<a name='L312'></a><a href='#L312'>312</a>
+<a name='L313'></a><a href='#L313'>313</a>
+<a name='L314'></a><a href='#L314'>314</a>
+<a name='L315'></a><a href='#L315'>315</a>
+<a name='L316'></a><a href='#L316'>316</a>
+<a name='L317'></a><a href='#L317'>317</a>
+<a name='L318'></a><a href='#L318'>318</a>
+<a name='L319'></a><a href='#L319'>319</a>
+<a name='L320'></a><a href='#L320'>320</a>
+<a name='L321'></a><a href='#L321'>321</a>
+<a name='L322'></a><a href='#L322'>322</a>
+<a name='L323'></a><a href='#L323'>323</a>
+<a name='L324'></a><a href='#L324'>324</a>
+<a name='L325'></a><a href='#L325'>325</a>
+<a name='L326'></a><a href='#L326'>326</a>
+<a name='L327'></a><a href='#L327'>327</a>
+<a name='L328'></a><a href='#L328'>328</a>
+<a name='L329'></a><a href='#L329'>329</a>
+<a name='L330'></a><a href='#L330'>330</a>
+<a name='L331'></a><a href='#L331'>331</a>
+<a name='L332'></a><a href='#L332'>332</a>
+<a name='L333'></a><a href='#L333'>333</a>
+<a name='L334'></a><a href='#L334'>334</a>
+<a name='L335'></a><a href='#L335'>335</a>
+<a name='L336'></a><a href='#L336'>336</a>
+<a name='L337'></a><a href='#L337'>337</a>
+<a name='L338'></a><a href='#L338'>338</a>
+<a name='L339'></a><a href='#L339'>339</a>
+<a name='L340'></a><a href='#L340'>340</a>
+<a name='L341'></a><a href='#L341'>341</a>
+<a name='L342'></a><a href='#L342'>342</a>
+<a name='L343'></a><a href='#L343'>343</a>
+<a name='L344'></a><a href='#L344'>344</a>
+<a name='L345'></a><a href='#L345'>345</a>
+<a name='L346'></a><a href='#L346'>346</a>
+<a name='L347'></a><a href='#L347'>347</a>
+<a name='L348'></a><a href='#L348'>348</a>
+<a name='L349'></a><a href='#L349'>349</a>
+<a name='L350'></a><a href='#L350'>350</a>
+<a name='L351'></a><a href='#L351'>351</a>
+<a name='L352'></a><a href='#L352'>352</a>
+<a name='L353'></a><a href='#L353'>353</a>
+<a name='L354'></a><a href='#L354'>354</a>
+<a name='L355'></a><a href='#L355'>355</a>
+<a name='L356'></a><a href='#L356'>356</a>
+<a name='L357'></a><a href='#L357'>357</a>
+<a name='L358'></a><a href='#L358'>358</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export interface Question {
+  id: number;
+  type: 'basic' | 'applied';
+  category: string;
+  question: string;
+  answer: string;
+  solution: string;
+}
+&nbsp;
+export const questions: Question[] = [
+  // 1. 基礎問題（10問）
+  {
+    id: 1,
+    type: 'basic',
+    category: '行列の加算・減算',
+    question: `次の行列の加算 $A + B$ を計算せよ。
+$$A = \\begin{pmatrix} 2 &amp; -3 \\\\ 1 &amp; 4 \\end{pmatrix}, \\quad B = \\begin{pmatrix} -1 &amp; 5 \\\\ 0 &amp; -2 \\end{pmatrix}$$`,
+    answer: `$$A + B = \\begin{pmatrix} 1 &amp; 2 \\\\ 1 &amp; 2 \\end{pmatrix}$$`,
+    solution: `行列の加算は、同じ位置（行・列）にある各成分同士を足し合わせます。
+$$A + B = \\begin{pmatrix} 2 + (-1) &amp; -3 + 5 \\\\ 1 + 0 &amp; 4 + (-2) \\end{pmatrix} = \\begin{pmatrix} 1 &amp; 2 \\\\ 1 &amp; 2 \\end{pmatrix}$$`
+  },
+  {
+    id: 2,
+    type: 'basic',
+    category: '行列の加算・減算',
+    question: `次の行列の減算 $A - B$ を計算せよ。
+$$A = \\begin{pmatrix} 3 &amp; 0 &amp; -2 \\\\ 1 &amp; 5 &amp; 4 \\\\ -1 &amp; -3 &amp; 2 \\end{pmatrix}, \\quad B = \\begin{pmatrix} 1 &amp; -1 &amp; 3 \\\\ 2 &amp; 4 &amp; 0 \\\\ -2 &amp; 1 &amp; -3 \\end{pmatrix}$$`,
+    answer: `$$A - B = \\begin{pmatrix} 2 &amp; 1 &amp; -5 \\\\ -1 &amp; 1 &amp; 4 \\\\ 1 &amp; -4 &amp; 5 \\end{pmatrix}$$`,
+    solution: `行列の減算は、同じ位置（行・列）にある各成分同士を引き算します。
+$$A - B = \\begin{pmatrix} 3-1 &amp; 0-(-1) &amp; -2-3 \\\\ 1-2 &amp; 5-4 &amp; 4-0 \\\\ -1-(-2) &amp; -3-1 &amp; 2-(-3) \\end{pmatrix} = \\begin{pmatrix} 2 &amp; 1 &amp; -5 \\\\ -1 &amp; 1 &amp; 4 \\\\ 1 &amp; -4 &amp; 5 \\end{pmatrix}$$`
+  },
+  {
+    id: 3,
+    type: 'basic',
+    category: '行列の掛け算',
+    question: `次の行列の積 $AB$ を求めよ。
+$$A = \\begin{pmatrix} 1 &amp; 2 \\\\ 3 &amp; -1 \\end{pmatrix}, \\quad B = \\begin{pmatrix} 2 &amp; 0 \\\\ 1 &amp; 4 \\end{pmatrix}$$`,
+    answer: `$$AB = \\begin{pmatrix} 4 &amp; 8 \\\\ 5 &amp; -4 \\end{pmatrix}$$`,
+    solution: `積 $AB$ の $(i, j)$ 成分は、行列 $A$ の第 $i$ 行ベクトルと行列 $B$ の第 $j$ 列ベクトルの内積です。
+- $(1, 1)$ 成分: $1 \\cdot 2 + 2 \\cdot 1 = 4$
+- $(1, 2)$ 成分: $1 \\cdot 0 + 2 \\cdot 4 = 8$
+- $(2, 1)$ 成分: $3 \\cdot 2 + (-1) \\cdot 1 = 5$
+- $(2, 2)$ 成分: $3 \\cdot 0 + (-1) \\cdot 4 = -4$
+よって、
+$$AB = \\begin{pmatrix} 4 &amp; 8 \\\\ 5 &amp; -4 \\end{pmatrix}$$`
+  },
+  {
+    id: 4,
+    type: 'basic',
+    category: '行列の掛け算',
+    question: `次の行列の積 $AB$ を求めよ。
+$$A = \\begin{pmatrix} 2 &amp; -1 &amp; 3 \\\\ 0 &amp; 1 &amp; 4 \\end{pmatrix}, \\quad B = \\begin{pmatrix} 1 &amp; 2 \\\\ -3 &amp; 0 \\\\ 1 &amp; -1 \\end{pmatrix}$$`,
+    answer: `$$AB = \\begin{pmatrix} 8 &amp; 1 \\\\ 1 &amp; -4 \\end{pmatrix}$$`,
+    solution: `$2 \\times 3$ 行列と $3 \\times 2$ 行列の積は $2 \\times 2$ 行列になります。
+- $(1, 1)$ 成分: $2 \\cdot 1 + (-1) \\cdot (-3) + 3 \\cdot 1 = 2 + 3 + 3 = 8$
+- $(1, 2)$ 成分: $2 \\cdot 2 + (-1) \\cdot 0 + 3 \\cdot (-1) = 4 - 3 = 1$
+- $(2, 1)$ 成分: $0 \\cdot 1 + 1 \\cdot (-3) + 4 \\cdot 1 = -3 + 4 = 1$
+- $(2, 2)$ 成分: $0 \\cdot 2 + 1 \\cdot 0 + 4 \\cdot (-1) = -4$
+よって、
+$$AB = \\begin{pmatrix} 8 &amp; 1 \\\\ 1 &amp; -4 \\end{pmatrix}$$`
+  },
+  {
+    id: 5,
+    type: 'basic',
+    category: '行列の掛け算',
+    question: `次の行列の積 $AB$ を求めよ。
+$$A = \\begin{pmatrix} 1 &amp; 2 \\\\ -1 &amp; 0 \\\\ 3 &amp; -2 \\end{pmatrix}, \\quad B = \\begin{pmatrix} 2 &amp; -1 \\\\ 1 &amp; 3 \\end{pmatrix}$$`,
+    answer: `$$AB = \\begin{pmatrix} 4 &amp; 5 \\\\ -2 &amp; 1 \\\\ 4 &amp; -9 \\end{pmatrix}$$`,
+    solution: `$3 \\times 2$ 行列と $2 \\times 2$ 行列の積は $3 \\times 2$ 行列になります。
+- $(1, 1)$ 成分: $1 \\cdot 2 + 2 \\cdot 1 = 4$
+- $(1, 2)$ 成分: $1 \\cdot (-1) + 2 \\cdot 3 = 5$
+- $(2, 1)$ 成分: $(-1) \\cdot 2 + 0 \\cdot 1 = -2$
+- $(2, 2)$ 成分: $(-1) \\cdot (-1) + 0 \\cdot 3 = 1$
+- $(3, 1)$ 成分: $3 \\cdot 2 + (-2) \\cdot 1 = 4$
+- $(3, 2)$ 成分: $3 \\cdot (-1) + (-2) \\cdot 3 = -9$
+よって、
+$$AB = \\begin{pmatrix} 4 &amp; 5 \\\\ -2 &amp; 1 \\\\ 4 &amp; -9 \\end{pmatrix}$$`
+  },
+  {
+    id: 6,
+    type: 'basic',
+    category: '行列式',
+    question: `次の行列 $A$ の行列式 $\\det(A)$ を求めよ。
+$$A = \\begin{pmatrix} 3 &amp; 5 \\\\ 2 &amp; 4 \\end{pmatrix}$$`,
+    answer: `$$\\det(A) = 2$$`,
+    solution: `$2 \\times 2$ 行列の行列式公式 $\\det(A) = ad - bc$ を用います。
+$$\\det(A) = 3 \\cdot 4 - 5 \\cdot 2 = 12 - 10 = 2$$`
+  },
+  {
+    id: 7,
+    type: 'basic',
+    category: '行列式',
+    question: `次の行列 $A$ の行列式 $\\det(A)$ を求めよ。
+$$A = \\begin{pmatrix} 1 &amp; 2 &amp; 3 \\\\ 0 &amp; 4 &amp; 5 \\\\ 1 &amp; 0 &amp; 2 \\end{pmatrix}$$`,
+    answer: `$$\\det(A) = 6$$`,
+    solution: `第1列に関する余因子展開を用いて計算します。
+$$\\det(A) = 1 \\cdot \\begin{vmatrix} 4 &amp; 5 \\\\ 0 &amp; 2 \\end{vmatrix} - 0 \\cdot \\begin{vmatrix} 2 &amp; 3 \\\\ 0 &amp; 2 \\end{vmatrix} + 1 \\cdot \\begin{vmatrix} 2 &amp; 3 \\\\ 4 &amp; 5 \\end{vmatrix}$$
+$$= 1 \\cdot (4 \\cdot 2 - 5 \\cdot 0) + 1 \\cdot (2 \\cdot 5 - 3 \\cdot 4)$$
+$$= 1 \\cdot 8 + 1 \\cdot (10 - 12) = 8 - 2 = 6$$
+（サラスの公式を用いても同様に $1 \\cdot 4 \\cdot 2 + 2 \\cdot 5 \\cdot 1 + 3 \\cdot 0 \\cdot 0 - (3 \\cdot 4 \\cdot 1 + 1 \\cdot 5 \\cdot 0 + 2 \\cdot 0 \\cdot 2) = 18 - 12 = 6$ と求まります）`
+  },
+  {
+    id: 8,
+    type: 'basic',
+    category: '逆行列',
+    question: `次の行列 $A$ の逆行列 $A^{-1}$ を求めよ。
+$$A = \\begin{pmatrix} 2 &amp; 5 \\\\ 1 &amp; 3 \\end{pmatrix}$$`,
+    answer: `$$A^{-1} = \\begin{pmatrix} 3 &amp; -5 \\\\ -1 &amp; 2 \\end{pmatrix}$$`,
+    solution: `$2 \\times 2$ 行列の逆行列の公式 $A^{-1} = \\frac{1}{ad - bc} \\begin{pmatrix} d &amp; -b \\\\ -c &amp; a \\end{pmatrix}$ を用います。
+$$\\det(A) = 2 \\cdot 3 - 5 \\cdot 1 = 1$$
+行列式が 1 なので、逆行列は公式より直接以下のようになります。
+$$A^{-1} = \\begin{pmatrix} 3 &amp; -5 \\\\ -1 &amp; 2 \\end{pmatrix}$$`
+  },
+  {
+    id: 9,
+    type: 'basic',
+    category: '逆行列',
+    question: `次の行列 $A$ の逆行列 $A^{-1}$ が存在するか判定し、存在する場合は求めよ。
+$$A = \\begin{pmatrix} 1 &amp; 2 &amp; 3 \\\\ 0 &amp; 1 &amp; 2 \\\\ 1 &amp; 2 &amp; 4 \\end{pmatrix}$$`,
+    answer: `逆行列は存在し、
+$$A^{-1} = \\begin{pmatrix} 0 &amp; -2 &amp; 1 \\\\ 2 &amp; 1 &amp; -2 \\\\ -1 &amp; 0 &amp; 1 \\end{pmatrix}$$`,
+    solution: `まず行列式 $\\det(A)$ を求めます。
+$$\\det(A) = 1 \\cdot (4 - 4) - 2 \\cdot (0 - 2) + 3 \\cdot (0 - 1) = 0 + 4 - 3 = 1 \\neq 0$$
+$\\det(A) \\neq 0$ であるため、逆行列は存在します。
+掃き出し法 $[A \\mid I] \\to [I \\mid A^{-1}]$ を用いて計算します。
+$$\\begin{pmatrix} 1 &amp; 2 &amp; 3 &amp; \\mid &amp; 1 &amp; 0 &amp; 0 \\\\ 0 &amp; 1 &amp; 2 &amp; \\mid &amp; 0 &amp; 1 &amp; 0 \\\\ 1 &amp; 2 &amp; 4 &amp; \\mid &amp; 0 &amp; 0 &amp; 1 \\end{pmatrix}$$
+第3行から第1行を引きます。
+$$\\begin{pmatrix} 1 &amp; 2 &amp; 3 &amp; \\mid &amp; 1 &amp; 0 &amp; 0 \\\\ 0 &amp; 1 &amp; 2 &amp; \\mid &amp; 0 &amp; 1 &amp; 0 \\\\ 0 &amp; 0 &amp; 1 &amp; \\mid &amp; -1 &amp; 0 &amp; 1 \\end{pmatrix}$$
+第2行から第3行の2倍を引き、第1行から第3行の3倍を引きます。
+$$\\begin{pmatrix} 1 &amp; 2 &amp; 0 &amp; \\mid &amp; 4 &amp; 0 &amp; -3 \\\\ 0 &amp; 1 &amp; 0 &amp; \\mid &amp; 2 &amp; 1 &amp; -2 \\\\ 0 &amp; 0 &amp; 1 &amp; \\mid &amp; -1 &amp; 0 &amp; 1 \\end{pmatrix}$$
+最後に第1行から第2行の2倍を引きます。
+$$\\begin{pmatrix} 1 &amp; 0 &amp; 0 &amp; \\mid &amp; 0 &amp; -2 &amp; 1 \\\\ 0 &amp; 1 &amp; 0 &amp; \\mid &amp; 2 &amp; 1 &amp; -2 \\\\ 0 &amp; 0 &amp; 1 &amp; \\mid &amp; -1 &amp; 0 &amp; 1 \\end{pmatrix}$$
+右半分の行列が逆行列となります。
+$$A^{-1} = \\begin{pmatrix} 0 &amp; -2 &amp; 1 \\\\ 2 &amp; 1 &amp; -2 \\\\ -1 &amp; 0 &amp; 1 \\end{pmatrix}$$`
+  },
+  {
+    id: 10,
+    type: 'basic',
+    category: 'ランク算出',
+    question: `次の行列 $A$ のランク（階数） $\\text{rank}(A)$ を求めよ。
+$$A = \\begin{pmatrix} 1 &amp; -1 &amp; 2 \\\\ 2 &amp; 1 &amp; -1 \\\\ 1 &amp; 2 &amp; -3 \\end{pmatrix}$$`,
+    answer: `$$\\text{rank}(A) = 2$$`,
+    solution: `行基本変形を行い、階段行列に変形します。
+$$\\begin{pmatrix} 1 &amp; -1 &amp; 2 \\\\ 2 &amp; 1 &amp; -1 \\\\ 1 &amp; 2 &amp; -3 \\end{pmatrix}$$
+第2行から第1行の2倍を引き、第3行から第1行を引きます。
+$$\\begin{pmatrix} 1 &amp; -1 &amp; 2 \\\\ 0 &amp; 3 &amp; -5 \\\\ 0 &amp; 3 &amp; -5 \\end{pmatrix}$$
+第3行から第2行を引きます。
+$$\\begin{pmatrix} 1 &amp; -1 &amp; 2 \\\\ 0 &amp; 3 &amp; -5 \\\\ 0 &amp; 0 &amp; 0 \\end{pmatrix}$$
+ゼロ行でない行（主成分を持つ行）の数は 2つ です。
+よって、行列 $A$ のランクは 2 になります。
+$$\\text{rank}(A) = 2$$`
+  },
+&nbsp;
+  // 2. 応用問題（10問）
+  {
+    id: 11,
+    type: 'applied',
+    category: '固有値・固有ベクトル',
+    question: `次の行列 $A$ の固有値 $\\lambda$ と、それぞれの固有値に対応する固有ベクトルを求めよ。
+$$A = \\begin{pmatrix} 3 &amp; 2 \\\\ 1 &amp; 2 \\end{pmatrix}$$`,
+    answer: `固有値 $\\lambda = 4, 1$
+固有ベクトル:
+- $\\lambda = 4$ のとき、 $c_1 \\begin{pmatrix} 2 \\\\ 1 \\end{pmatrix} \\quad (c_1 \\neq 0)$
+- $\\lambda = 1$ のとき、 $c_2 \\begin{pmatrix} 1 \\\\ -1 \\end{pmatrix} \\quad (c_2 \\neq 0)$`,
+    solution: `固有多項式 $\\det(\\lambda I - A) = 0$ を解きます。
+$$\\det \\begin{pmatrix} \\lambda-3 &amp; -2 \\\\ -1 &amp; \\lambda-2 \\end{pmatrix} = 0$$
+$$(\\lambda-3)(\\lambda-2) - 2 = \\lambda^2 - 5\\lambda + 4 = (\\lambda-4)(\\lambda-1) = 0$$
+よって、固有値は $\\lambda = 4, 1$ です。
+&nbsp;
+- $\\lambda = 4$ のとき:
+$A - 4I = \\begin{pmatrix} -1 &amp; 2 \\\\ 1 &amp; -2 \\end{pmatrix}$
+$(A - 4I)v = 0 \\implies -x + 2y = 0 \\implies x = 2y$
+固有ベクトルは $c_1 \\begin{pmatrix} 2 \\\\ 1 \\end{pmatrix} \\quad (c_1 \\neq 0)$
+&nbsp;
+- $\\lambda = 1$ のとき:
+$A - I = \\begin{pmatrix} 2 &amp; 2 \\\\ 1 &amp; 1 \\end{pmatrix}$
+$(A - I)v = 0 \\implies x + y = 0 \\implies x = -y$
+固有ベクトルは $c_2 \\begin{pmatrix} 1 \\\\ -1 \\end{pmatrix} \\quad (c_2 \\neq 0)$`
+  },
+  {
+    id: 12,
+    type: 'applied',
+    category: '固有値・固有ベクトル',
+    question: `次の行列 $A$ の固有値 $\\lambda$ （重解を含む）と、対応する固有ベクトルを求めよ。
+$$A = \\begin{pmatrix} 3 &amp; 1 \\\\ -1 &amp; 1 \\end{pmatrix}$$`,
+    answer: `固有値 $\\lambda = 2$ （重複度 2）
+固有ベクトル:
+- $c \\begin{pmatrix} 1 \\\\ -1 \\end{pmatrix} \\quad (c \\neq 0)$`,
+    solution: `固有多項式 $\\det(\\lambda I - A) = 0$ を解きます。
+$$\\det \\begin{pmatrix} \\lambda-3 &amp; -1 \\\\ 1 &amp; \\lambda-1 \\end{pmatrix} = 0$$
+$$(\\lambda-3)(\\lambda-1) - (-1) = \\lambda^2 - 4\\lambda + 4 = (\\lambda-2)^2 = 0$$
+よって、固有値は $\\lambda = 2$（重解）です。
+&nbsp;
+- $\\lambda = 2$ のとき:
+$A - 2I = \\begin{pmatrix} 1 &amp; 1 \\\\ -1 &amp; -1 \\end{pmatrix}$
+$(A - 2I)v = 0 \\implies x + y = 0 \\implies x = -y$
+固有ベクトルは $c \\begin{pmatrix} 1 \\\\ -1 \\end{pmatrix} \\quad (c \\neq 0)$ となります。`
+  },
+  {
+    id: 13,
+    type: 'applied',
+    category: '固有値・固有ベクトル',
+    question: `次の対称行列 $A$ の固有値 $\\lambda$ と、それぞれの固有値に対応する固有ベクトルを求めよ。
+$$A = \\begin{pmatrix} 0 &amp; 2 \\\\ 2 &amp; 3 \\end{pmatrix}$$`,
+    answer: `固有値 $\\lambda = 4, -1$
+固有ベクトル:
+- $\\lambda = 4$ のとき、 $c_1 \\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix} \\quad (c_1 \\neq 0)$
+- $\\lambda = -1$ のとき、 $c_2 \\begin{pmatrix} -2 \\\\ 1 \\end{pmatrix} \\quad (c_2 \\neq 0)$`,
+    solution: `固有多項式 $\\det(\\lambda I - A) = 0$ を解きます。
+$$\\det \\begin{pmatrix} \\lambda &amp; -2 \\\\ -2 &amp; \\lambda-3 \\end{pmatrix} = 0$$
+$$\\lambda(\\lambda-3) - 4 = \\lambda^2 - 3\\lambda - 4 = (\\lambda-4)(\\lambda+1) = 0$$
+よって、固有値は $\\lambda = 4, -1$ です。
+&nbsp;
+- $\\lambda = 4$ のとき:
+$A - 4I = \\begin{pmatrix} -4 &amp; 2 \\\\ 2 &amp; -1 \\end{pmatrix}$
+$(A - 4I)v = 0 \\implies 2x - y = 0 \\implies y = 2x$
+固有ベクトルは $c_1 \\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix} \\quad (c_1 \\neq 0)$
+&nbsp;
+- $\\lambda = -1$ のとき:
+$A + I = \\begin{pmatrix} 1 &amp; 2 \\\\ 2 &amp; 4 \\end{pmatrix}$
+$(A + I)v = 0 \\implies x + 2y = 0 \\implies x = -2y$
+固有ベクトルは $c_2 \\begin{pmatrix} -2 \\\\ 1 \\end{pmatrix} \\quad (c_2 \\neq 0)$
+（対称行列なので、異なる固有値に対応する固有ベクトル $\\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix}$ と $\\begin{pmatrix} -2 \\\\ 1 \\end{pmatrix}$ は互いに直交します）`
+  },
+  {
+    id: 14,
+    type: 'applied',
+    category: '対角化判定',
+    question: `次の行列 $A$ が対角化可能であるか判定せよ。対角化可能である場合は、対角化を行う行列 $P$ と対角化後の行列 $D$ を求めよ。
+$$A = \\begin{pmatrix} 3 &amp; 1 \\\\ -1 &amp; 1 \\end{pmatrix}$$`,
+    answer: `対角化不可能`,
+    solution: `行列の対角化可能性は、固有値の重複度（代数的重複度）と固有空間の次元（幾何学的重複度）が一致するかどうかで判定できます。
+固有値問題（問題12）より、固有値は $\\lambda = 2$ (重解、重複度 2) です。
+固有空間 $V_2 = \\ker(A - 2I)$ の次元を調べます。
+$$A - 2I = \\begin{pmatrix} 1 &amp; 1 \\\\ -1 &amp; -1 \\end{pmatrix}$$
+この行列のランク（階数）は 1 です。
+固有空間の次元は $n - \\text{rank}(A - 2I) = 2 - 1 = 1$ となります。
+代数的重複度 (2) に対して幾何学的重複度 (1) が小さいため、一次独立な固有ベクトルを2本取ることができず、**対角化不可能**です。`
+  },
+  {
+    id: 15,
+    type: 'applied',
+    category: '対角化判定',
+    question: `次の行列 $A$ が対角化可能であるか判定せよ。対角化可能である場合は、対角化を行う行列 $P$ と対角化後の行列 $D$ を求めよ。
+$$A = \\begin{pmatrix} 1 &amp; 3 \\\\ 2 &amp; 2 \\end{pmatrix}$$`,
+    answer: `対角化可能。
+$$P = \\begin{pmatrix} 1 &amp; 3 \\\\ 1 &amp; -2 \\end{pmatrix}, \\quad D = \\begin{pmatrix} 4 &amp; 0 \\\\ 0 &amp; -1 \\end{pmatrix}$$
+（※ $P$ や $D$ の列・成分の順序は任意）`,
+    solution: `まず固有値を求めます。
+$$\\det(\\lambda I - A) = \\det \\begin{pmatrix} \\lambda-1 &amp; -3 \\\\ -2 &amp; \\lambda-2 \\end{pmatrix} = 0$$
+$$(\\lambda-1)(\\lambda-2) - 6 = \\lambda^2 - 3\\lambda - 4 = (\\lambda-4)(\\lambda+1) = 0$$
+固有値は $\\lambda = 4, -1$ です。
+$2 \\times 2$ 行列が異なる 2つの実数固有値を持つため、この時点で**対角化可能**です。
+&nbsp;
+それぞれの固有ベクトルを求めます。
+- $\\lambda = 4$ のとき:
+$A - 4I = \\begin{pmatrix} -3 &amp; 3 \\\\ 2 &amp; -2 \\end{pmatrix} \\implies -x + y = 0 \\implies v_1 = \\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}$
+- $\\lambda = -1$ のとき:
+$A + I = \\begin{pmatrix} 2 &amp; 3 \\\\ 2 &amp; 3 \\end{pmatrix} \\implies 2x + 3y = 0 \\implies v_2 = \\begin{pmatrix} 3 \\\\ -2 \\end{pmatrix}$
+&nbsp;
+これらを並べて対角化行列 $P$ とし、対応する固有値を対角成分に並べた行列 $D$ を作ります。
+$$P = \\begin{pmatrix} 1 &amp; 3 \\\\ 1 &amp; -2 \\end{pmatrix}, \\quad D = \\begin{pmatrix} 4 &amp; 0 \\\\ 0 &amp; -1 \\end{pmatrix}$$
+このとき $P^{-1}AP = D$ が成り立ちます。`
+  },
+  {
+    id: 16,
+    type: 'applied',
+    category: '連立方程式 Ax=b を行列で解く',
+    question: `次の連立一次方程式を、行列形式 $Ax=b$ の逆行列を用いて解け。
+$$\\begin{cases} 2x + 5y = 3 \\\\ x + 3y = 2 \\end{cases}$$`,
+    answer: `$$x = -1, \\quad y = 1$$`,
+    solution: `連立一次方程式を行列形式で表すと、以下のようになります。
+$$\\begin{pmatrix} 2 &amp; 5 \\\\ 1 &amp; 3 \\end{pmatrix} \\begin{pmatrix} x \\\\ y \\end{pmatrix} = \\begin{pmatrix} 3 \\\\ 2 \\end{pmatrix}$$
+係数行列 $A = \\begin{pmatrix} 2 &amp; 5 \\\\ 1 &amp; 3 \\end{pmatrix}$ の逆行列 $A^{-1}$ を左から掛けます。
+逆行列は問題8より、
+$$A^{-1} = \\begin{pmatrix} 3 &amp; -5 \\\\ -1 &amp; 2 \\end{pmatrix}$$
+です。よって解は、
+$$\\begin{pmatrix} x \\\\ y \\end{pmatrix} = A^{-1} b = \\begin{pmatrix} 3 &amp; -5 \\\\ -1 &amp; 2 \\end{pmatrix} \\begin{pmatrix} 3 \\\\ 2 \\end{pmatrix} = \\begin{pmatrix} 3\\cdot3 + (-5)\\cdot2 \\\\ (-1)\\cdot3 + 2\\cdot2 \\end{pmatrix} = \\begin{pmatrix} -1 \\\\ 1 \\end{pmatrix}$$
+したがって、 $x = -1, y = 1$ となります。`
+  },
+  {
+    id: 17,
+    type: 'applied',
+    category: '連立方程式 Ax=b を行列で解く',
+    question: `次の連立一次方程式を解け。
+$$\\begin{cases} x + 2y + 3z = 2 \\\\ y + 2z = 1 \\\\ x + 2y + 4z = 3 \\end{cases}$$`,
+    answer: `$$x = 1, \\quad y = -1, \\quad z = 1$$`,
+    solution: `行列形式 $Ax = b$ とおくと、
+$$A = \\begin{pmatrix} 1 &amp; 2 &amp; 3 \\\\ 0 &amp; 1 &amp; 2 \\\\ 1 &amp; 2 &amp; 4 \\end{pmatrix}, \\quad b = \\begin{pmatrix} 2 \\\\ 1 \\\\ 3 \\end{pmatrix}, \\quad x = \\begin{pmatrix} x \\\\ y \\\\ z \\end{pmatrix}$$
+係数行列 $A$ の逆行列 $A^{-1}$ を用いて解きます。
+問題9より、逆行列は、
+$$A^{-1} = \\begin{pmatrix} 0 &amp; -2 &amp; 1 \\\\ 2 &amp; 1 &amp; -2 \\\\ -1 &amp; 0 &amp; 1 \\end{pmatrix}$$
+です。両辺に左から $A^{-1}$ を掛けます。
+$$\\begin{pmatrix} x \\\\ y \\\\ z \\end{pmatrix} = \\begin{pmatrix} 0 &amp; -2 &amp; 1 \\\\ 2 &amp; 1 &amp; -2 \\\\ -1 &amp; 0 &amp; 1 \\end{pmatrix} \\begin{pmatrix} 2 \\\\ 1 \\\\ 3 \\end{pmatrix} = \\begin{pmatrix} 0\\cdot2 + (-2)\\cdot1 + 1\\cdot3 \\\\ 2\\cdot2 + 1\\cdot1 + (-2)\\cdot3 \\\\ (-1)\\cdot2 + 0\\cdot1 + 1\\cdot3 \\end{pmatrix} = \\begin{pmatrix} 1 \\\\ -1 \\\\ 1 \\end{pmatrix}$$
+よって、 $x = 1, y = -1, z = 1$ です。`
+  },
+  {
+    id: 18,
+    type: 'applied',
+    category: '射影・直交成分',
+    question: `ベクトル $x = \\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix}$ の、ベクトル $v = \\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix}$ 方向への射影ベクトル $p$ と、その直交成分 $w$ を求めよ。`,
+    answer: `射影ベクトル $$p = \\begin{pmatrix} 11/5 \\\\ 22/5 \\end{pmatrix}$$, 直交成分 $$w = \\begin{pmatrix} 4/5 \\\\ -2/5 \\end{pmatrix}$$`,
+    solution: `射影ベクトル $p$ は次の公式で求められます。
+$$p = \\frac{x \\cdot v}{\\|v\\|^2} v$$
+- 内積 $x \\cdot v = 3 \\cdot 1 + 4 \\cdot 2 = 3 + 8 = 11$
+- ノルムの2乗 $\\|v\\|^2 = 1^2 + 2^2 = 5$
+よって、
+$$p = \\frac{11}{5} \\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix} = \\begin{pmatrix} 11/5 \\\\ 22/5 \\end{pmatrix}$$
+&nbsp;
+直交成分 $w$ は元のベクトルから射影ベクトルを引くことで求まります。
+$$w = x - p = \\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix} - \\begin{pmatrix} 11/5 \\\\ 22/5 \\end{pmatrix} = \\begin{pmatrix} 15/5 - 11/5 \\\\ 20/5 - 22/5 \\end{pmatrix} = \\begin{pmatrix} 4/5 \\\\ -2/5 \\end{pmatrix}$$
+（確認: $p \\cdot w = \\frac{11}{5} \\cdot \\frac{4}{5} + \\frac{22}{5} \\cdot \\left(-\\frac{2}{5}\\right) = \\frac{44}{25} - \\frac{44}{25} = 0$ より、射影ベクトルと直交成分は直交しています）`
+  },
+  {
+    id: 19,
+    type: 'applied',
+    category: '射影・直交成分',
+    question: `ベクトル $x = \\begin{pmatrix} 4 \\\\ 2 \\end{pmatrix}$ の、ベクトル $v = \\begin{pmatrix} 3 \\\\ -1 \\end{pmatrix}$ 方向への射影ベクトル $p$ と、その直交成分 $w$ を求めよ。`,
+    answer: `射影ベクトル $$p = \\begin{pmatrix} 3 \\\\ -1 \\end{pmatrix}$$, 直交成分 $$w = \\begin{pmatrix} 1 \\\\ 3 \\end{pmatrix}$$`,
+    solution: `射影ベクトル $p$ を求めます。
+- 内積 $x \\cdot v = 4 \\cdot 3 + 2 \\cdot (-1) = 12 - 2 = 10$
+- ノルムの2乗 $\\|v\\|^2 = 3^2 + (-1)^2 = 9 + 1 = 10$
+よって、
+$$p = \\frac{10}{10} v = v = \\begin{pmatrix} 3 \\\\ -1 \\end{pmatrix}$$
+&nbsp;
+直交成分 $w$ は:
+$$w = x - p = \\begin{pmatrix} 4 \\\\ 2 \\end{pmatrix} - \\begin{pmatrix} 3 \\\\ -1 \\end{pmatrix} = \\begin{pmatrix} 1 \\\\ 3 \\end{pmatrix}$$
+（確認: $p \\cdot w = 3 \\cdot 1 + (-1) \\cdot 3 = 3 - 3 = 0$ より直交しています）`
+  },
+  {
+    id: 20,
+    type: 'applied',
+    category: 'Gram-Schmidt',
+    question: `次の一次独立なベクトルの組 $u_1, u_2$ をグラム・シュミットの直交化法により正規直交化し、正規直交基底 $q_1, q_2$ を求めよ。
+$$u_1 = \\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix}, \\quad u_2 = \\begin{pmatrix} 1 \\\\ 3 \\end{pmatrix}$$`,
+    answer: `$$q_1 = \\begin{pmatrix} 3/5 \\\\ 4/5 \\end{pmatrix}, \\quad q_2 = \\begin{pmatrix} -4/5 \\\\ 3/5 \\end{pmatrix}$$`,
+    solution: `グラム・シュミットの直交化の手順に従って計算します。
+&nbsp;
+1. **第1のベクトル $q_1$ を求める**
+$u_1$ をそのまま用いて正規化します。
+$$\\|u_1\\| = \\sqrt{3^2 + 4^2} = 5$$
+$$q_1 = \\frac{u_1}{\\|u_1\\|} = \\begin{pmatrix} 3/5 \\\\ 4/5 \\end{pmatrix}$$
+&nbsp;
+2. **第2のベクトル $q_2$ を求める**
+$u_2$ から $q_1$ 方向の射影成分を引きます。
+$$v_2 = u_2 - (u_2 \\cdot q_1)q_1$$
+- 内積 $u_2 \\cdot q_1 = 1 \\cdot \\frac{3}{5} + 3 \\cdot \\frac{4}{5} = \\frac{15}{5} = 3$
+$$v_2 = \\begin{pmatrix} 1 \\\\ 3 \\end{pmatrix} - 3 \\begin{pmatrix} 3/5 \\\\ 4/5 \\end{pmatrix} = \\begin{pmatrix} 1 - 9/5 \\\\ 3 - 12/5 \\end{pmatrix} = \\begin{pmatrix} -4/5 \\\\ 3/5 \\end{pmatrix}$$
+$v_2$ のノルム（長さ）を計算します。
+$$\\|v_2\\| = \\sqrt{\\left(-\\frac{4}{5}\\right)^2 + \\left(\\frac{3}{5}\\right)^2} = \\sqrt{\\frac{16+9}{25}} = 1$$
+すでにノルムが 1 になっているので、正規化は不要で $q_2 = v_2$ です。
+$$q_2 = \\begin{pmatrix} -4/5 \\\\ 3/5 \\end{pmatrix}$$
+&nbsp;
+よって、求める正規直交基底は、
+$$q_1 = \\begin{pmatrix} 3/5 \\\\ 4/5 \\end{pmatrix}, \\quad q_2 = \\begin{pmatrix} -4/5 \\\\ 3/5 \\end{pmatrix}$$`
+  }
+];
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2026-07-03T03:10:46.475Z
+            </div>
+        <script src="../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
+    </body>
+</html>
+    
