@@ -75,6 +75,22 @@ describe('App Integration', () => {
     expect(screen.getByText('calcan')).toBeInTheDocument();
   });
 
+  it('should flip card back via Backspace key when flipped', () => {
+    render(<App />);
+
+    // 開始
+    fireEvent.click(screen.getByText('基礎ドリル'));
+    fireEvent.click(screen.getByRole('button', { name: /ドリルを開始するまる/ }));
+
+    // Spaceキーでカードを裏返す
+    fireEvent.keyDown(window, { code: 'Space' });
+    expect(screen.getByTestId('flip-container')).toHaveClass('flipped');
+
+    // Backspaceキーでカードを元に戻す
+    fireEvent.keyDown(window, { code: 'Backspace' });
+    expect(screen.getByTestId('flip-container')).not.toHaveClass('flipped');
+  });
+
   it('should ignore keyboard events when not on play screen', () => {
     render(<App />);
     

@@ -76,6 +76,13 @@ function App() {
         } else {
           handleNext();
         }
+      } else if (event.code === 'Backspace') {
+        // デフォルトのブラウザ「戻る」アクションなどを防ぐ
+        event.preventDefault();
+        
+        if (isFlipped) {
+          setIsFlipped(false);
+        }
       }
     };
 
