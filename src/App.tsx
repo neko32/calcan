@@ -65,23 +65,29 @@ function App() {
   // キーボードショートカットの監視 (Space / Enter)
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (screen !== 'play') return;
-
       if (event.code === 'Space' || event.code === 'Enter') {
         // デフォルトのブラウザスクロールやボタン押下アクションを防ぐ
         event.preventDefault();
         
-        if (!isFlipped) {
-          setIsFlipped(true);
-        } else {
-          handleNext();
+        if (screen === 'start') {
+          handleStart(selectedType);
+        } else if (screen === 'play') {
+          if (!isFlipped) {
+            setIsFlipped(true);
+          } else {
+            handleNext();
+          }
+        } else if (screen === 'result') {
+          handleBackToStart();
         }
       } else if (event.code === 'Backspace') {
-        // デフォルトのブラウザ「戻る」アクションなどを防ぐ
-        event.preventDefault();
-        
-        if (isFlipped) {
-          setIsFlipped(false);
+        if (screen === 'play') {
+          // デフォルトのブラウザ「戻る」アクションなどを防ぐ
+          event.preventDefault();
+          
+          if (isFlipped) {
+            setIsFlipped(false);
+          }
         }
       }
     };
@@ -90,7 +96,7 @@ function App() {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [screen, isFlipped, currentIndex, playlist]);
+  }, [screen, isFlipped, currentIndex, playlist, selectedType]);
 
   return (
     <>

@@ -91,11 +91,26 @@ describe('App Integration', () => {
     expect(screen.getByTestId('flip-container')).not.toHaveClass('flipped');
   });
 
-  it('should ignore keyboard events when not on play screen', () => {
+  it('should navigate screens via Space / Enter keys on start and result screens', () => {
     render(<App />);
     
-    // スタート画面でSpaceキーを押しても何も起きないことを確認
+    // 1. スタート画面でSpaceキーを押してドリルを開始する
     fireEvent.keyDown(window, { code: 'Space' });
+    expect(screen.getByText(/\/ 20/)).toBeInTheDocument(); // デフォルトは 'all' (20問)
+    
+    // 全20問解く
+    for (let i = 1; i <= 20; i++) {
+      // Spaceでフリップ
+      fireEvent.keyDown(window, { code: 'Space' });
+      // Enterで次へ (最後はリザルトへ)
+      fireEvent.keyDown(window, { code: 'Enter' });
+    }
+    
+    // 2. 結果画面に到達していることを確認
+    expect(screen.getByText('お疲れ様まる！')).toBeInTheDocument();
+    
+    // 3. 結果画面でEnterキーを押してスタート画面に戻る
+    fireEvent.keyDown(window, { code: 'Enter' });
     expect(screen.getByText('calcan')).toBeInTheDocument();
   });
 });
